@@ -4,27 +4,27 @@
 <h4>Create-Files</h4>
 Create a hidden file, put a "." before the file name
 <br>
-+touch .filename.txt
++ touch .filename.txt
 
 Create multiple files with one command
 <br>
-+touch filename{1..10}
++ touch filename{1..10}
 
 Creates 100 files with the name filename1-3 
 <br>
-+touch filename {file1,file2,file3} {1..100} {a..z}
++ touch filename {file1,file2,file3} {1..100} {a..z}
 
 Create a file with a dash	
 <br>
-+touch -- -filename	
++ touch -- -filename	
 
 Remove file with a dash    	
 <br>
-+rm -rf -- -filename	
++ rm -rf -- -filename	
 
 Remove all file except file1
 <br>
-+rm -rf !(file1)		
++ rm -rf !(file1)		
 
 
 <h2> Vi Editor Shortcuts </h2>
