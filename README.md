@@ -1,24 +1,30 @@
 # Linux
 
-
 <h1> File Commands</h1>
 <h4>Create-Files</h4>
 Create a hidden file, put a "." before the file name
 <br>
-**touch .filename.txt**
++touch .filename.txt
 
 Create multiple files with one command
-touch filename{1..10}
+<br>
++touch filename{1..10}
 
 Creates 100 files with the name filename1-3 
-touch filename {file1,file2,file3} {1..100} {a..z}
+<br>
++touch filename {file1,file2,file3} {1..100} {a..z}
 
-Create a file with a dash		
-touch -- -filename	
+Create a file with a dash	
+<br>
++touch -- -filename	
 
-Remove file with a dash    		Remove all file except file1
-rm -rf -- -filename				rm -rf !(file1)
+Remove file with a dash    	
+<br>
++rm -rf -- -filename	
 
+Remove all file except file1
+<br>
++rm -rf !(file1)		
 
 
 <h2> Vi Editor Shortcuts </h2>
