@@ -4,7 +4,7 @@
 <h4>Create-Files</h4>
 Create a hidden file, put a "." before the file name
 <br>
-+ touch .filename.txt
+- touch .filename.txt
 
 <br>
 
