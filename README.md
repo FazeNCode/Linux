@@ -2,6 +2,7 @@
 
 <h1> File Commands</h1>
 <h4>Create-Files</h4>
+<br>
 Create a hidden file, put a "." before the file name
 <br>
 + touch .filename.txt
