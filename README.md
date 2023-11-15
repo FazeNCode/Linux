@@ -1,11 +1,10 @@
 # Linux
 
-	<h1>File Commands:</h1>
+<h1>File Commands</h1>
 
-<h4>Create-Files</h4>
+<h3>Create-Files</h3>
+	touch .filename.txt
 Create a hidden file, put a "." before the file name
-<br>
-- touch .filename.txt
 <br>
 
 Create multiple files with one command
