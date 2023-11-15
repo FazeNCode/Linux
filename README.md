@@ -1,6 +1,7 @@
 # Linux
 
-<h1> File Commands</h1>
+	<h1>File Commands:</h1>
+
 <h4>Create-Files</h4>
 Create a hidden file, put a "." before the file name
 <br>
