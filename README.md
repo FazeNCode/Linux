@@ -15,23 +15,27 @@ Create a file with a dash
 	touch -- -filename
 Remove file with a dash
 
-	+ rm -rf -- -filename	
+	rm -rf -- -filename	
 Remove all file except file1
 
-	+ rm -rf !(file1)		
+	rm -rf !(file1)		
 
 
-<h2> Vi Editor Shortcuts </h2>
+<h2 text-align="center"> Vi Editor Shortcuts </h2>
 [CTRL-C] to exist insert
 :wq to write and quit
+<br>
 SHIFT Z Z in vi editor to save and quit, similar to :wq
 :view /etc/passwd  to view a file inside the vim editor
 :11,15d  delete line from 11~15
 :5,15s/current-word/new-word/g new word from line 5~15
 
-yy [to copy the text] 	p [to paste the text you copied
-dd [to cut the text]
-/ssh to search for the word “ssh”
+<br>
+- yy [to copy the text] 	p [to paste the text you copied
+<br>
++ dd [to cut the text]
+<br>
++ /ssh to search for the word “ssh”
 
 
 <h4> Display-Files:</h4>
