@@ -5,7 +5,6 @@
 Create a hidden file, put a "." before the file name
 <br>
 - touch .filename.txt
-
 <br>
 
 Create multiple files with one command
@@ -42,11 +41,13 @@ dd [to cut the text]
 /ssh to search for the word “ssh”
 
 
-Display-Files:
-stat  /path/folder/file  
-Get complete information of files and or directories
-file  /path/folder/file  
-Get information on file type
+<h4> Display-Files:</h4>
++ stat  /path/folder/file  
+Get detailed information of files and or directories, inlcuding date of creation, inode, ownership, etc..
+<br>
+
++ file  /path/folder/file  
+read the  information on file type
 cat > filename		 [ > overrides  :Receptors:   >> saves]
 Edit a file on the fly	
 less filename.txt 
@@ -54,13 +55,16 @@ Display the content inside a file NOTE: INTERACTIVE
 lsof -i :80 -u faze
 -i internet address |  -u user | flags can be used independently
 
-tree / -LaphD 1
-Display content in a tree format inside. |must install package| 
+<br>
++ tree / -LaphD 1
+Display content in a tree format inside.  | Package must be installed to utilize tree command 
 
-wc --line < file-name.txt
+<br>
++ wc --line < file-name.txt
 Show the number of lines inside the file.
-ls -al filename 2> output.txt
-2 redirects the output from the console to the output.txt file
+<br> 		    
++ ls -al filename 2> output.txt
+ Displays the all folders and files, including hidden onto the console. 2 redirects the output from the console to the output.txt file
 
 diff -c file1 file2                               sdiff file 1 file2
 -c is for context
@@ -73,12 +77,16 @@ head -n 20 /etc/file.log		tail -n 20 /etc/file.log
 View first 20 lines of the file	View last 20 lines of the file
 
 
-Copy-Files: 
-cp -r -a  /src/file /destination/file .
-- r recursively  | - a attribute preserving state
+<h4> Copy-Files: </h4>
 
-scp -rv faze@192.168.244.146:/home/faze/file C:\Users\Faisa\Desktop
++ cp -r -a  /src/file /destination/file .
+- r recursively.  | - a attribute preserving state.  
+<br>
+
++ scp -rv faze@192.168.244.146:/home/faze/file C:\Users\Faisa\Desktop
 Copy from remote machine (linux) to a remote machine (windows) using powershell
+<br>
+
 scp -rv C:\Users\Faisa\Desktop\file.txt faze@ip:/home/faze/folder
 Copy from local machine (windows) to a remote machine (linux) using powershell, make sure to give file extension.
 scp -rv filename faze@192.168.50.240:/home/faze/folder/securecopy/
