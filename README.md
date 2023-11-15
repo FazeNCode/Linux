@@ -2,12 +2,15 @@
 
 <h1>File Commands</h1>
 	<h3>Create-Files</h3>
- 
-	touch .filename.txt
 Create a hidden file, put a "." before the file name
 
+	touch .filename.txt
+
+
+	
+-Create multiple files with one command
+
 	touch filename{1..10}
- Create multiple files with one command
 
 	touch filename {file1,file2,file3} {1..100} {a..z}
 Creates 100 files with the name filename1-3 
