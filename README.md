@@ -3,46 +3,55 @@
 <h1>File Commands</h1>
 	<h3 align="center"> Create-Files </h3>
 
-```	
+	
  Create a hidden file, put a . before the file name
-	touch .filename.txt
+```
+touch .filename.txt
 ```
   Create multiple files, in this scenario, we create 10 files
-  
-	touch filename{1..10}
-
+```  
+touch filename{1..10}
+```
 Creates 100 files with the name filename1-3 
-
-	touch filename {file1,file2,file3} {1..100} {a..z}
- 
+```
+touch filename {file1,file2,file3} {1..100} {a..z}
+ ```
 Create a file with a dash
-
-	touch -- -filename
- 
+```
+touch -- -filename
+ ```
 Remove file with a dash
-
-	rm -rf -- -filename	
- 
+```
+rm -rf -- -filename	
+ ```
 Remove all file except file1
-
-	rm -rf !(file1)		
-
+```
+rm -rf !(file1)		
+```
 
 <h2 text-align="center"> Vi Editor Shortcuts </h2>
 [CTRL-C] to exist insert
-:wq to write and quit
 <br>
-SHIFT Z Z in vi editor to save and quit, similar to :wq
-:view /etc/passwd  to view a file inside the vim editor
+:wq to write and quit the file.
+<br>
+SHIFT Z Z in vi editor to save and quit the file. It is an alternative to :wq
+<br>
+:view /etc/passwd  To view a file inside the vim editor
+<br>
 :11,15d  delete line from 11~15
+<br>
 :5,15s/current-word/new-word/g new word from line 5~15
 
 <br>
-- yy [to copy the text] 	p [to paste the text you copied
+<h4>NOTE: Exit insert mode to utilize the shortcuts</h4>
 <br>
-+ dd [to cut the text]
+yy  In the file type yy twice to copy the entire content inside the file.	
 <br>
-+ /ssh to search for the word “ssh”
+p  To paste the content you copied
+<br>
+dd  To cut the text on the current line.
+<br>
+ssh To search for the word “ssh”
 
 
 <h4> Display-Files:</h4>
