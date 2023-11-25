@@ -55,12 +55,19 @@ ssh To search for the word “ssh”
 
 
 <h4> Display-Files:</h4>
-+ stat  /path/folder/file  
-Get detailed information of files and or directories, inlcuding date of creation, inode, ownership, etc..
-<br>
 
-+ file  /path/folder/file  
-read the  information on file type
+Retrieve detailed information of files and or directories, inlcuding date of creation, inode, ownership, etc..
+```
+ stat  /path/folder/file
+```
+Display the content inside the file, "cat" is short for concatenate
+```
+cat > filename		 [ > overrides  :Receptors:   >> saves]
+```
+
+Display information on file type
+file  /path/folder/file  
+
 cat > filename		 [ > overrides  :Receptors:   >> saves]
 Edit a file on the fly	
 less filename.txt 
@@ -182,19 +189,30 @@ That automates tasks.
 
 
 User Commands:
-USER ESSENTIAL:		Cat /etc/passwd
-compgen -u
-Display the users on the machine, with minimal information
-Id [username]
-Display the details of the active user.
-last
-Display the last login user
-who
-Display who’s logged into the system
-getent group sudo 
-Check what group has sudo power
 
-passwd -S [username]
+USER ESSENTIAL:		Cat /etc/passwd
+
+Display the users on the machine, with minimal information
+```
+compgen -u
+```
+Display the details of the active user.
+```
+id user_name
+```
+Display the last login users
+```
+last
+```
+Display who’s logged into the system
+```
+who
+```
+Check what group has sudo power
+```
+getent group sudo 
+```
+
 1.) The username
 2.) Password status Locked (L), No Password (NP), Password (P)
 3.) Date of last password change
@@ -202,26 +220,35 @@ passwd -S [username]
 5.) Maximum password age
 6.) Warning period  (days given before password expires.)
 7.) Inactivity period (days after a password expires before it is locked.)
+```
+passwd -S user_name
+```
 
-chage -l [username]    
-Check the users password settings, such as,
+Check the users password settings, such as
 Last password change
 Password expires
 Password inactive
 Account expires
+```
+chage -l user_name  
+```
 
-
-
-
-chage -E 2023-01-30 [username]
 Set the expiration date for a user 
-
-chage -M 30 [username]
+```
+chage -E 2023-01-30 user_name
+```
 Password will expire after a maximum of 30 days 
-chage -m 7 [username]
+```
+chage -M 30 user_name
+```
 Minimum amount of days the user can his/her password
-chage -M -1 [username]
+```
+chage -m 7 user_name
+```
 Remove the password expiration date
+```
+chage -M -1 user_name
+```
 
 ps -aux |grep [username] 
 List the process on a user
@@ -245,30 +272,44 @@ Kill the process on a user
 
 
 
-UserAdd:
-adduser [username] -s /sbin/nologin 
+<h6> Adding_User: </h6>
 Create a user with a non-interactive shell
-adduser [username] -s /bin/bash  
+```
+adduser user_name -s /sbin/nologin 
+```
 Create a user with the bash shell. the -s flag stands for shell
-
-sudo useradd  -u 1100 [username] 
+```
+adduser user_name -s /bin/bash  
+```
 Create a user with 1100 uuid
-sudo useradd  m [username] 
+```
+sudo user_add -u 1100 user_name
+```
 Create a user with a home directory  
-sudo useradd  --system [username]
+```
+sudo useradd m user_name
+```
 Create a user with a system account, system account does not have a /home directory, usually daemons use system account.
+```
+sudo useradd  --system user_name
+```
+Create a user with the username john and password will be 12345.
+```
+echo -e “john” | passwd --stdin “12345”
+```
 
-echo -e “john” | passwd --stdin “123456me”
-Create a user with the username john and password will be 123456me.
 
+<h6> Deleting_User: </h6>
 
-UserDelete:
-sudo userdel [username] sudo
 Remove the user named username from the group sudo.
-userdel -rf [username]
+```
+sudo userdel user_name sudo
+```
+
 The -f would forcefully remove this user, including the user’s home directory/mail (if any) 
-
-
+```
+userdel -rf user_name
+```
 
 
 UserMod:
