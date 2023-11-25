@@ -1,4 +1,4 @@
-<H1>This repo encompasses Linux commands, also covers a wide range of topics related to Linux.</H1>
+<H3>This repo encompasses Linux commands, also covers a wide range of topics related to Linux.</H3>
 [![Youtube](https://img.shields.io/badge/Youtube-Profile-informational?style=flat&logo=youtube&logoColor=white&color=0D76A8)](https://www.youtube.com/@FazeNCode)
 
 
